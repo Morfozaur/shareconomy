@@ -12,16 +12,18 @@ import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Register from "./components/Register";
 import {Route, Switch} from "react-router-dom";
+import Menu from "./components/home/elements/Menu";
 
 function App() {
   return (
         <>
-          <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route path='/logowanie' component={Login}/>
-            <Route path='/wylogowano' component={Logout}/>
-            <Route path='/rejestracja' component={Register}/>
-          </Switch>
+            <Menu/>
+            <Switch>
+                <Route exact path='/' component={Home}/>
+                <Route path='/logowanie' component={Login}/>
+                <Route path='/wylogowano' component={Logout}/>
+                <Route path='/rejestracja' component={Register}/>
+            </Switch>
         </>
   );
 }

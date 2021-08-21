@@ -2,7 +2,9 @@ import React from 'react';
 
 const HomeSteps = () => {
     return (
-        <div></div>
+        <div>
+            STEPS
+        </div>
     );
 }
 

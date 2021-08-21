@@ -2,7 +2,9 @@ import React from 'react';
 
 const HomeHelper = () => {
     return (
-        <div></div>
+        <div className='resttest'>
+            HELPER
+        </div>
     );
 }
 

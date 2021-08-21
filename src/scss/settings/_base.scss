@@ -1,0 +1,12 @@
+body {
+  box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $base-color;
+}
