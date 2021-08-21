@@ -31,7 +31,7 @@ const Menu = () => {
                 <li className='menu__main--link'>O co chodzi?</li>
                 <li className='menu__main--link'>O nas</li>
                 <li className='menu__main--link'>Fundacja i organizacje</li>
-                <li className='menu__main--link'>Kontakt</li>
+                <li className='menu__main--link'><ScrollLink to='contact' smooth={true} duration={700}>Kontakt</ScrollLink></li>
             </ul>
         </menu>
     );
