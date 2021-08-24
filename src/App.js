@@ -12,7 +12,7 @@ import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Register from "./components/Register";
 import {Route, Switch} from "react-router-dom";
-import Menu from "./components/home/elements/Menu";
+import Menu from "./components/Menu";
 
 function App() {
   return (

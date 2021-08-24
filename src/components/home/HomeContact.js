@@ -1,11 +1,10 @@
 import React from 'react';
-import {Element} from 'react-scroll'
 
 const HomeContact = () => {
     return (
-        <div className='contact'>
-            <Element name="contact">CONTACT</Element>
-        </div>
+        <section className='contact' id='contact'>
+            CONTACT
+        </section>
     );
 }
 

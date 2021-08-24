@@ -1,10 +1,9 @@
 import React from 'react';
-import Menu from "./elements/Menu";
 import Decoration from "../elements/Decoration";
 
 const HomeHeader = () => {
     return (
-        <div className='home__header'>
+        <section className='home__header'>
             <div className="minicontainer">
                 <div className="menu__toform">
                     <h2 className="menu__toform--title">Zacznij pomagać!</h2>
@@ -16,7 +15,7 @@ const HomeHeader = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
