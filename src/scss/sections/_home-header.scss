@@ -1,7 +1,37 @@
-section {
-  height: 500px;
-  border: 3px red solid;
-  .header {
-
+.header {
+  position: relative;
+  display: flex;
+  height: 840px;
+  .cover, .toform {
+    width: 50%;
+  }
+  .cover__img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-100%);
+  }
+  .toform {
+    height: 350px;
+    width: 674px;
+    align-self: center;
+    &, &__title, &__buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title {
+      margin-bottom: 1.625rem;
+      align-items: center;
+    }
+    &__buttons {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 4rem;
+    }
   }
 }
+
+

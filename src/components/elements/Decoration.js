@@ -3,7 +3,7 @@ import React from 'react';
 const Decoration = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="253" height="33"
-             viewBox="0 0 253 33" className='decoration'>
+             viewBox="0 0 253 33" className='decor'>
             <defs>
                 <clipPath id="a">
                     <rect width="253" height="33" fill="none"/>

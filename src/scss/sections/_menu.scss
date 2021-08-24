@@ -7,7 +7,8 @@
     display: flex;
     justify-content: flex-end;
   }
-  &__login--button {
+  .login__button {
+    cursor: pointer;
     padding: 0.625rem;
     margin-left: 0.625rem;
     font-size: 0.875rem;
@@ -16,7 +17,8 @@
       font-size: 0.812rem;
     }
   }
-  &__main--link {
+  .main__link {
+    cursor: pointer;
     font-size: 1.125rem;
     padding: 0.625rem 1.25rem;
     margin-left: 1rem;
