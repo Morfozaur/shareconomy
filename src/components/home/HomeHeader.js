@@ -17,14 +17,16 @@ const HomeHeader = () => {
                 <img className='cover__img' src={cover} alt="cover"/>
             </div>
             <div className="toform">
-                <h2 className="toform__title">
-                    <span>Zacznij pomagać!</span>
-                    <span>Oddaj niechciane rzeczy w zaufane ręce</span>
-                </h2>
-                <Decoration/>
-                <div className="toform__buttons">
-                    <div className="toform__btn btn--big" onClick={toLogin}><span>Oddaj</span><span>Rzeczy</span></div>
-                    <div className="toform__btn btn--big" onClick={toLogin}><span>Zorganizuj</span><span>Zbiórkę</span></div>
+                <div className="toform__group">
+                    <div className="toform__title">
+                        <span>Zacznij pomagać!</span>
+                        <span>Oddaj niechciane rzeczy w zaufane ręce</span>
+                    </div>
+                    <Decoration/>
+                    <div className="toform__buttons">
+                        <div className="toform__btn btn--big" onClick={toLogin}><span>Oddaj</span><span>Rzeczy</span></div>
+                        <div className="toform__btn btn--big" onClick={toLogin}><span>Zorganizuj</span><span>Zbiórkę</span></div>
+                    </div>
                 </div>
             </div>
         </section>

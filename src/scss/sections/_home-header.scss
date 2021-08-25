@@ -1,27 +1,35 @@
 .header {
-  position: relative;
   display: flex;
   height: 840px;
-  .cover, .toform {
+  padding: 0 8.875rem;
+  .cover {
+    position: relative;
     width: 50%;
   }
   .cover__img {
     position: absolute;
+    z-index: -1;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-100%);
+    right: 0
+    //left: 50%;
+    //transform: translateX(-100%);
   }
   .toform {
-    height: 350px;
-    width: 674px;
-    align-self: center;
-    &, &__title, &__buttons {
+    &__group {
+      height: 350px;
+      width: 674px;
+      align-self: center;
+    }
+    &, &__group, &__title, &__buttons {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
     &__title {
+      font-size: 2.375rem;
+      line-height: 3.437rem;
+      letter-spacing: -1px;
       margin-bottom: 1.625rem;
       align-items: center;
     }
@@ -30,6 +38,24 @@
       flex-direction: row;
       justify-content: space-between;
       margin-top: 4rem;
+    }
+  }
+  @include narrow-pc {
+    justify-content: center;
+    .toform {
+      width: 683px;
+    }
+  }
+  @include tablet {
+    justify-content: center;
+    .cover {
+      display: none;
+    }
+  }
+  @include phone {
+    justify-content: center;
+    .cover {
+      display: none;
     }
   }
 }

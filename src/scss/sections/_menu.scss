@@ -7,26 +7,34 @@
     display: flex;
     justify-content: flex-end;
   }
-  .login__button {
+  &__button {
     cursor: pointer;
     padding: 0.625rem;
     margin-left: 0.625rem;
     font-size: 0.875rem;
-    &:last-of-type {
+    &--bordered {
       border: 1px solid $theme-color;
       font-size: 0.812rem;
     }
   }
-  .main__link {
+  &__link {
     cursor: pointer;
     font-size: 1.125rem;
     padding: 0.625rem 1.25rem;
     margin-left: 1rem;
-    &:first-of-type {
+    &--bordered {
       border: 1px solid $base-color;
     }
-    &:last-of-type {
+    &--last {
       padding-right: 0;
+    }
+  }
+  @include tablet {
+    padding-inline: 0;
+    width: 720px;
+    margin: 0 auto;
+    &__link--last {
+      padding: 0.625rem 1rem;
     }
   }
 }

@@ -1,0 +1,52 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2.875rem 11rem 5.375rem;
+  width: 100%;
+  background: $theme-color;
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 315px;
+  }
+  &__header {
+    font-size: 5.625rem;
+    line-height: 7.625rem;
+  }
+  &__lead {
+    margin: 0.625rem 0 1.437rem;
+    font-size: 1.125rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__text {
+    text-align: center;
+  }
+  @include narrow-pc {
+    padding-inline: 0;
+    justify-content: space-evenly;
+  }
+  @include tablet {
+    padding-inline: 4rem;
+    justify-content: center;
+    gap: 4rem;
+    &__group {
+      width: 30%;
+      max-width: 315px;
+      flex-shrink: 1;
+    }
+  }
+  @include phone {
+    padding-inline: 2rem;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    &__group {
+      min-width: 200px;
+      width: 40%;
+      flex-shrink: 1;
+    }
+  }
+}
