@@ -5,13 +5,20 @@ import HomeSteps from "./home/HomeSteps";
 import HomeAbout from "./home/HomeAbout";
 import HomeHelpers from "./home/HomeHelpers";
 import HomeContact from "./home/HomeContact";
+import {useHistory} from "react-router-dom";
 
 const Home = () => {
+    const history = useHistory()
+
+    const toLogin = () => {
+        history.push('/logowanie')
+    };
+
     return (
         <>
-            <HomeHeader/>
+            <HomeHeader toLogin={toLogin}/>
             <HomeInfo/>
-            <HomeSteps/>
+            <HomeSteps toLogin={toLogin}/>
             <HomeAbout/>
             <HomeHelpers/>
             <HomeContact/>

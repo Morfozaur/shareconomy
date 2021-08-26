@@ -1,15 +1,10 @@
 import React from 'react';
 import Decoration from "../elements/Decoration";
 import cover from "../../assets/cover.jpg"
-import {useHistory} from "react-router-dom";
 
-const HomeHeader = () => {
+const HomeHeader = ({toLogin}) => {
 
-    const history = useHistory()
 
-    const toLogin = () => {
-        history.push('/logowanie')
-    };
 
     return (
         <section className='header'>

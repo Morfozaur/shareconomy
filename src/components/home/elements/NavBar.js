@@ -21,7 +21,7 @@ const NavBar = ({addClass, open}) => {
         <ul className={classNames('menu__main', {'menu__main--mobile':addClass})}
             style={addClass ? {maxHeight: open ? '400px': '0'} : {}}>
             <li className='menu__link menu__link--bordered'>
-                <div onClick={() => scrollToPage('info')}>Start</div>
+                <div onClick={() => scrollToPage('header')}>Start</div>
             </li>
             <li className='menu__link'>
                 <div onClick={() => scrollToPage('steps')}>O co chodzi?</div>

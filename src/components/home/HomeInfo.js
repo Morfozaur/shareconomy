@@ -10,7 +10,7 @@ const HomeInfo = () => {
     return (
         <section className='info'>
             {infoData.map(({header, lead, text}) =>
-                <InfoGroup header={header} lead={lead} text={text}/>)}
+                <InfoGroup key={lead} header={header} lead={lead} text={text}/>)}
         </section>
     );
 }
