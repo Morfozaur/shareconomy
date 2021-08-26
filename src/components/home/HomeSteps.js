@@ -15,25 +15,25 @@ const HomeSteps = ({toLogin}) => {
             <div className="steps__bar">
                 <div className="steps__group">
                     <img src={icon1} alt="shirt" className="steps__ico" />
-                    <p className="steps__text">Wybierz rzeczy</p>
+                    <p className="steps__lead">Wybierz rzeczy</p>
                     <hr className="steps__line"/>
                     <p className="steps__text">ubrania, zabawki, sprzęt i inne</p>
                 </div>
                 <div className="steps__group">
                     <img src={icon2} alt="bag" className="steps__ico" />
-                    <p className="steps__text">Spakuj je</p>
+                    <p className="steps__lead">Spakuj je</p>
                     <hr className="steps__line"/>
                     <p className="steps__text">skorzystaj z worków na śmieci</p>
                 </div>
                 <div className="steps__group">
                     <img src={icon3} alt="magnifying" className="steps__ico" />
-                    <p className="steps__text">Zdecyduj, komu chcesz pomóc</p>
+                    <p className="steps__lead">Zdecyduj, komu chcesz pomóc</p>
                     <hr className="steps__line"/>
                     <p className="steps__text">wybierz zaufane miejsce</p>
                 </div>
                 <div className="steps__group">
                     <img src={icon4} alt="arrows" className="steps__ico" />
-                    <p className="steps__text">Zamów kuriera</p>
+                    <p className="steps__lead">Zamów kuriera</p>
                     <hr className="steps__line"/>
                     <p className="steps__text">kurier przyjedzie w dogodnym terminie</p>
                 </div>

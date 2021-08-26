@@ -23,6 +23,8 @@
   }
   &__text {
     text-align: center;
+    font-family: $font-alt;
+    font-weight: 300;
   }
   @include narrow-pc {
     padding-inline: 0;
