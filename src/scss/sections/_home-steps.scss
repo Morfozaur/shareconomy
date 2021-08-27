@@ -10,6 +10,8 @@
   }
   &__title {
     font-size: 2.375rem;
+    padding: 0 2rem;
+    text-align: center;
   }
   &__bar {
     display: flex;
@@ -31,5 +33,30 @@
   }
   &__line {
     width: 4.375rem;
+  }
+  @include narrow-pc {
+    &__bar {
+      gap: 10.424vw;
+    }
+  }
+  @include tablet {
+    &__bar {
+      padding: 0 4.5rem;
+      gap: 0;
+      justify-content: space-between;
+    }
+    &__group {
+      padding: 0 0.625rem;
+    }
+  }
+  @include phone {
+    &__bar {
+      padding: 1.75rem 3.5rem 2.75rem;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    &__group {
+      padding: 1rem 0.625rem 0;
+    }
   }
 }
