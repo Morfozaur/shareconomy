@@ -1,6 +1,66 @@
 .about {
   display: flex;
-  &__frame, &__img{
+  &__frame, &__cover{
     width: 50%;
+  }
+  &__frame, &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__frame {
+    background: $light-color;
+  }
+  &__content {
+    margin: 3rem 9.375rem;
+    text-align: center;
+  }
+  &__title {
+    font-size: 2.375rem;
+    line-height: 3.375rem;
+    margin-bottom: 1.625rem;
+  }
+  &__text {
+    font-size: 1.875rem;
+    line-height: 3.375rem;
+    margin: 3.437rem 0 3.5rem
+  }
+  &__signature {
+    align-self: flex-end;
+  }
+  &__cover {
+    overflow: hidden;
+  }
+  &__img {
+    height: 100%;
+  }
+  @include mobile {
+    &__frame {
+      position: relative;
+      width: 100%;
+      background: $shade-color-op;
+      &::before {
+        z-index: -1;
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../assets/people.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.2;
+      }
+    }
+    &__content {
+      max-width: 38rem;
+    }
+    &__cover {
+      display: none;
+    }
   }
 }
