@@ -20,6 +20,7 @@ const Home = () => {
             <HomeInfo/>
             <HomeSteps toLogin={toLogin}/>
             <HomeAbout/>
+
             <HomeHelpers/>
             <HomeContact/>
         </>
