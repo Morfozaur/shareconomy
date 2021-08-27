@@ -4,7 +4,7 @@ import {scroller} from "react-scroll";
 import classNames from "classnames";
 
 
-const NavBar = ({addClass, open}) => {
+const NavBar = ({mobile, open}) => {
 
     const history = useHistory()
 
@@ -18,8 +18,8 @@ const NavBar = ({addClass, open}) => {
     };
 
     return (
-        <ul className={classNames('menu__main', {'menu__main--mobile':addClass})}
-            style={addClass ? {maxHeight: open ? '400px': '0'} : {}}>
+        <ul className={classNames('menu__main', {'menu__main--mobile':mobile})}
+            style={mobile ? {maxHeight: open ? '400px': '0'} : {}}>
             <li className='menu__link menu__link--bordered'>
                 <div onClick={() => scrollToPage('header')}>Start</div>
             </li>

@@ -38,7 +38,12 @@ const HomeSteps = ({toLogin}) => {
                     <p className="steps__text">kurier przyjedzie w dogodnym terminie</p>
                 </div>
             </div>
-            <div className="steps__btn btn--big" onClick={toLogin}><span>Oddaj</span><span>Rzeczy</span></div>
+            <div className="steps__btn" >
+                <div className="btn btn--big" onClick={toLogin}>
+                    <span>Oddaj</span>
+                    <span>Rzeczy</span>
+                </div>
+            </div>
         </section>
     );
 }

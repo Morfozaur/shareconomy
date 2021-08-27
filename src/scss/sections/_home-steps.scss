@@ -1,6 +1,6 @@
 .steps {
   padding: 3.48rem 0 5rem;
-  &, &__header, &__group {
+  &, &__header, &__group, &__btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +33,10 @@
   }
   &__line {
     width: 4.375rem;
+  }
+  &__btn {
+    width: 100%;
+    padding-inline:.9rem;
   }
   @include narrow-pc {
     &__bar {

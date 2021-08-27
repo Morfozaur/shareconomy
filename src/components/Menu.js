@@ -22,13 +22,15 @@ function useResizer() {
 
 const Menu = () => {
     const [openNav, setOpenNav] = useState(false);
+    const [mobile, setMobile] = useState(true);
 
     const windowWidth = useResizer();
 
     useEffect(()=> {
-        if (windowWidth >776 && openNav !==false) {
-            setOpenNav(false)
-        }
+        if (windowWidth >776) {
+            if (openNav) {setOpenNav(false)}
+            if (mobile) {setMobile(false)}
+        } else if (mobile === false) {setMobile(true)}
     }, [windowWidth, openNav])
 
     return (
@@ -38,8 +40,7 @@ const Menu = () => {
                 <div className="menu__button"><Link to="/logowanie">Zaloguj</Link></div>
                 <div className="menu__button menu__button--bordered"><Link to="/rejestracja">Załóż konto</Link></div>
             </div>
-            <NavBar/>
-            <NavBar addClass={true} open={openNav}/>
+            <NavBar mobile={mobile} open={openNav}/>
         </menu>
     );
 }

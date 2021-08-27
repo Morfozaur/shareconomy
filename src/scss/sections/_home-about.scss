@@ -1,0 +1,6 @@
+.about {
+  display: flex;
+  &__frame, &__img{
+    width: 50%;
+  }
+}
