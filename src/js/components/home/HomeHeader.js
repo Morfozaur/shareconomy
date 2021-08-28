@@ -1,6 +1,6 @@
 import React from 'react';
 import Decoration from "../elements/Decoration";
-import cover from "../../assets/cover.jpg"
+import cover from "../../../assets/cover.jpg"
 
 const HomeHeader = ({toLogin}) => {
 

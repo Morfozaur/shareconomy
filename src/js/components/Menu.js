@@ -31,7 +31,7 @@ const Menu = () => {
             if (openNav) {setOpenNav(false)}
             if (mobile) {setMobile(false)}
         } else if (mobile === false) {setMobile(true)}
-    }, [windowWidth, openNav])
+    }, [windowWidth, openNav, mobile])
 
     return (
         <menu className='menu'>
