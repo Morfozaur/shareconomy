@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './scss/main.scss'
-import App from './App';
+import App from './js/components/App';
 import reportWebVitals from './reportWebVitals';
 import {HashRouter} from "react-router-dom";
+
+
 
 ReactDOM.render(
   <HashRouter>

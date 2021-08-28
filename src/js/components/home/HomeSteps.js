@@ -1,9 +1,9 @@
 import React from 'react';
 import Decoration from "../elements/Decoration";
-import icon1 from "../../assets/icon-1.svg"
-import icon2 from "../../assets/icon-2.svg"
-import icon3 from "../../assets/icon-3.svg"
-import icon4 from "../../assets/icon-4.svg"
+import icon1 from "../../../assets/icon-1.svg"
+import icon2 from "../../../assets/icon-2.svg"
+import icon3 from "../../../assets/icon-3.svg"
+import icon4 from "../../../assets/icon-4.svg"
 
 const HomeSteps = ({toLogin}) => {
     return (

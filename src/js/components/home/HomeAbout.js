@@ -1,7 +1,7 @@
 import React from 'react';
-import people from '../../assets/people.jpg'
+import people from '../../../assets/people.jpg'
 import Decoration from "../elements/Decoration";
-import signature from "../../assets/signature.svg";
+import signature from "../../../assets/signature.svg";
 
 const HomeAbout = () => {
     return (
