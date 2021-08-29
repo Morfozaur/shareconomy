@@ -1,39 +1,53 @@
-import React, {useEffect} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {loadData} from "../../redux/actions/loadData";
-// import {isLogged} from "../../redux/reducers/isLogged";
+import Decoration from "../elements/Decoration";
+import HelperMotto from "./elements/HelperMotto";
+import Paginator from "./elements/Paginator";
+import classNames from "classnames";
+import {fetchList} from "../../redux/actions/allFetchers";
 
 
 const HomeHelpers = () => {
+    const [active, setActive] = useState('foundations');
 
     const dispatch = useDispatch();
 
-    // const login = useSelector(state => state.isLogged)
-    const foundations = useSelector(state => state.foundations)
-    const fundraisers = useSelector(state => state.fundraisers)
-    const organisations = useSelector(state => state.organisations)
+    const starter = useSelector(state => state.helpers.foundations)
+
+    const setActivator = (e, type) => {
+        e.preventDefault();
+        setActive(type);
+    };
+
+    const loadStarter = useCallback(async ()=> {
+        await dispatch(loadData());
+        fetchList(starter)
+    }, [dispatch, starter])
+
+
 
     useEffect(()=> {
-        dispatch(loadData())
-    },[dispatch])
+        loadStarter()
+            .catch(err => console.log(err))
+    },[loadStarter])
 
     return (
         <section className='helpers'>
-            <p>HELPERS</p>
-            {foundations.map(({name, goal, request}) => {
-                return (
-                    <div className='helpers__single' key={name}>
-                        <h2>{name}</h2>
-                        <p>{goal}</p>
-                        <strong>{request}</strong>
-                    </div>
-                )
-            })}
-            <p>HELPERS</p>
-
-            <p>HELPERS</p>
-
-
+            <div className="helpers__header">
+                <div className="helpers__title">Komu pomagamy?</div>
+                <Decoration/>
+            </div>
+            <div className="helpers__selector">
+                <button className={classNames("helpers__choose", {'helpers__choose--active': active==='foundations'})}
+                        onClick={e=>setActivator(e,'foundations')}>Fundacjom</button>
+                <button className={classNames("helpers__choose", {'helpers__choose--active': active==='organisations'})}
+                        onClick={e=>setActivator(e,'organisations')}>Organizacjom pozarządowym</button>
+                <button className={classNames("helpers__choose", {'helpers__choose--active': active==='fundraisers'})}
+                            onClick={e=>setActivator(e,'fundraisers')}>Lokalnym zbiórkom</button>
+            </div>
+            <HelperMotto active={active}/>
+            <Paginator starter={starter}/>
         </section>
     );
 }

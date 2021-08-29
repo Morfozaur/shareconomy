@@ -1,6 +1,7 @@
 import {db} from "../../firebase";
-import { collection, getDocs } from "firebase/firestore";
-import {fetchFoundations, fetchFundraisers, fetchOrganisations} from "./allFetchers";
+import { collection, getDocs, getDoc, doc } from "firebase/firestore";
+import {fetchFoundations, fetchFundraisers, fetchMotto, fetchOrganisations} from "./allFetchers";
+
 
 const loadData = () => {
     return async (dispatch) => {
@@ -10,7 +11,7 @@ const loadData = () => {
                 dispatch(fetchFoundations(data));
             })
 
-        await getDocs(collection(db, 'fundraisings'))
+        await getDocs(collection(db, 'fundraisers'))
             .then(res => {
                 const data = res.docs.map(post => post.data());
                 dispatch(fetchFundraisers(data));
@@ -20,6 +21,10 @@ const loadData = () => {
             .then(res => {
                 const data = res.docs.map(post => post.data());
                 dispatch(fetchOrganisations(data));
+            })
+        await getDoc(doc(db, 'motto', 'motto'))
+            .then(res => {
+                dispatch(fetchMotto(res.data()));
             })
     }
 }

@@ -1,14 +1,14 @@
 import {combineReducers} from "redux";
 import {isLogged} from "./isLogged";
-import {foundations} from "./foundations";
-import {organisations} from "./organisations";
-import {fundraisers} from "./fundraisers";
+import {motto} from "./motto";
+import {helpers} from "./helpers";
+import {currList} from "./currList";
 
 const allReducers = combineReducers( {
     isLogged,
-    foundations,
-    organisations,
-    fundraisers
+    helpers,
+    motto,
+    currList
 });
 
 export {allReducers}
