@@ -4,13 +4,23 @@ import './scss/main.scss'
 import App from './js/components/App';
 import reportWebVitals from './reportWebVitals';
 import {HashRouter} from "react-router-dom";
+import {applyMiddleware, compose, createStore} from "redux";
+import {Provider} from "react-redux";
+import thunk from "redux-thunk";
+import {allReducers} from "./js/redux/reducers/allReducers";
 
+const composeEnhancers = compose(
+    applyMiddleware(thunk)
+)
 
+const store = createStore(allReducers, composeEnhancers);
 
 ReactDOM.render(
-  <HashRouter>
-          <App />
-  </HashRouter>,
+    <Provider store={store}>
+        <HashRouter>
+            <App />
+        </HashRouter>
+    </Provider>,
   document.getElementById('root')
 );
 
