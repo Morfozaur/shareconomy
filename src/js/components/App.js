@@ -1,9 +1,10 @@
+import '../../scss/main.scss'
 import Home from "./Home";
 import Login from "./Login";
 import Logout from "./Logout";
 import Register from "./Register";
 import Menu from "./Menu";
-import {Route, Switch} from "react-router-dom";
+import {HashRouter, Route, Switch} from "react-router-dom";
 import {getAuth, onAuthStateChanged} from "firebase/auth";
 import {useDispatch} from "react-redux";
 import {fetchLogin} from "../redux/actions/allFetchers";
@@ -21,7 +22,7 @@ function App() {
     })
 
     return (
-        <>
+        <HashRouter>
             <Menu/>
             <Switch>
                 <Route exact path='/' component={Home}/>
@@ -29,7 +30,7 @@ function App() {
                 <Route path='/wylogowano' component={Logout}/>
                 <Route path='/rejestracja' component={Register}/>
             </Switch>
-        </>
+        </HashRouter>
   );
 }
 

@@ -2,7 +2,7 @@ import {db} from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import {fetchFoundations, fetchFundraisers, fetchOrganisations} from "./allFetchers";
 
-const fetchLists = () => {
+const loadData = () => {
     return async (dispatch) => {
         await getDocs(collection(db, 'foundations'))
             .then(res => {
@@ -24,4 +24,4 @@ const fetchLists = () => {
     }
 }
 
-export {fetchLists}
+export {loadData}
