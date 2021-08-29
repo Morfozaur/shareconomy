@@ -1,10 +1,10 @@
-const foundations = (state = [], action) => {
+const currList = (state = false, action) => {
     switch (action.type) {
-        case 'FOUNDATIONS':
+        case 'LIST':
             return action.payload
         default:
             return state
     }
 };
 
-export {foundations}
+export {currList}

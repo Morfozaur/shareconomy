@@ -1,10 +1,10 @@
-const fundraisers = (state = [], action) => {
+const motto = (state = {}, action) => {
     switch (action.type) {
-        case 'FUNDRAISERS':
+        case 'MOTTO':
             return action.payload
         default:
             return state
     }
 };
 
-export {fundraisers}
+export {motto}
