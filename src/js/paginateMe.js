@@ -13,15 +13,10 @@ const paginateMe = (currList, setDividedList, setBtns) => {
         }
         newList.push(pageList)
     }
-    if (newList.length > 0){
-
-        setDividedList(newList)
-        const arr =[]
-        for (let i = 1; i <=groups; i++) {
-            arr.push(i)
-        }
-        setBtns(arr)
-    }
+    setDividedList(newList)
+    const arr =[]
+    for (let i = 1; i <=groups; i++) {arr.push(i)}
+    setBtns(arr)
 }
 
 export {paginateMe}
