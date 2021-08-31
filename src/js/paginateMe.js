@@ -1,4 +1,4 @@
-const paginateMe = (currList, setCurrPage) => {
+const paginateMe = (currList, setCurrPage, setBtns) => {
     let groups = parseInt(currList.length / 3);
     if (currList.length % 3 > 0) {groups ++}
     const starter = [...currList]
@@ -14,9 +14,16 @@ const paginateMe = (currList, setCurrPage) => {
         newList.push(pageList)
     }
     if (newList.length > 0){
+
         console.log(newList.length, 'test')
         console.log('tak')
         setCurrPage(newList[0])
+        const arr =[]
+        for (let i = 1; i <=groups; i++) {
+            arr.push(i)
+        }
+        console.log(arr)
+        setBtns(arr)
     }
 }
 

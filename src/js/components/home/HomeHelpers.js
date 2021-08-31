@@ -6,12 +6,17 @@ import HelperMotto from "./elements/HelperMotto";
 import Paginator from "./elements/Paginator";
 import classNames from "classnames";
 import {fetchList} from "../../redux/actions/allFetchers";
+import {dumbData} from "../../dumbData";
 
 
 const HomeHelpers = () => {
     const [active, setActive] = useState('foundations');
 
-    const starter = useSelector(state => state.helpers.foundations)
+
+    const dispatch = useDispatch();
+
+    // const starter = useSelector(state => state.helpers.foundations)
+    const starter = dumbData
 
     const setActivator = (e, type) => {
         e.preventDefault();
