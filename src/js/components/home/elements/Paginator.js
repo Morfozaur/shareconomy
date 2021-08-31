@@ -1,15 +1,14 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {paginateMe} from "../../../paginateMe";
 import SingleFund from "./SingleFund";
-import {useSelector} from "react-redux";
 
 const Paginator = ({starter}) => {
     const [currList, setCurrList] = useState(starter)
     const [currPage, setCurrPage] = useState([])
+    const [btns, setBtns] = useState([])
 
     const firstHelpers = useCallback(()=> {
-        paginateMe(currList, setCurrPage)
-        console.log(currPage, currList)
+        paginateMe(currList, setCurrPage, setBtns)
     },[currList])
 
     useEffect(()=> {
@@ -25,7 +24,9 @@ const Paginator = ({starter}) => {
             </div>
 
             <div className="helper__nav">
-                {/*{new Array()}*/}
+                {btns.map(el =>{
+                    return <p>penis</p>
+                })}
             </div>
         </>
     );
