@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 const HelperMotto = ({active}) => {
     const motto = useSelector(state => state.motto)
     return (
-        <div>{motto[active]}</div>
+        <div className='helpers__motto'>{motto[active]}</div>
     );
 }
 

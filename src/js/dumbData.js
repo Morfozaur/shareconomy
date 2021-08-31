@@ -1,27 +1,27 @@
 const dumbData = [
     {
         name: "Post Testowy 1",
-        goal: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur consequuntur delectus ducimus et nisi officia pariatur quaerat vero. Delectus.",
+        goal: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         request: ['test', 'post', 'text'],
     },
     {
         name: "Post Testowy 2",
-        goal: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Aspernatur consectetur consequuntur delectus ducimus et nisi officia pariatur quaerat vero. Delectus.",
+        goal: "Aspernatur consectetur consequuntur delectus ducimus.",
         request: ['test', 'post', 'text'],
     },
     {
         name: "Post Testowy 3",
-        goal: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur consequuntur delectus ducimus et nisi officia pariatur quaerat vero. Delectus.",
+        goal: "Consequuntur delectus ducimus et nisi officia pariatur.",
         request: ['test', 'post', 'text'],
     },
     {
         name: "Post Testowy 4",
-        goal: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur consequuntur delectus ducimus et nisi officia pariatur quaerat vero. Delectus.",
+        goal: "Lorem ipsum adipisicing elit consequuntur quaerat vero. Delectus.",
         request: ['test', 'post', 'text'],
     },
     {
         name: "Post Testowy 5",
-        goal: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur consequuntur delectus ducimus et nisi officia pariatur quaerat vero. Delectus.",
+        goal: "Adipisicing aspernatur delectus ducimus et nisi  quaerat delectus.",
         request: ['test', 'post', 'text'],
     }
 ]

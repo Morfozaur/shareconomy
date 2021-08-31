@@ -22,7 +22,6 @@ const paginateMe = (currList, setCurrPage, setBtns) => {
         for (let i = 1; i <=groups; i++) {
             arr.push(i)
         }
-        console.log(arr)
         setBtns(arr)
     }
 }
