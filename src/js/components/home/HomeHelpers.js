@@ -11,26 +11,12 @@ import {fetchList} from "../../redux/actions/allFetchers";
 const HomeHelpers = () => {
     const [active, setActive] = useState('foundations');
 
-    const dispatch = useDispatch();
-
     const starter = useSelector(state => state.helpers.foundations)
 
     const setActivator = (e, type) => {
         e.preventDefault();
         setActive(type);
     };
-
-    const loadStarter = useCallback(async ()=> {
-        await dispatch(loadData());
-        fetchList(starter)
-    }, [dispatch, starter])
-
-
-
-    useEffect(()=> {
-        loadStarter()
-            .catch(err => console.log(err))
-    },[loadStarter])
 
     return (
         <section className='helpers'>

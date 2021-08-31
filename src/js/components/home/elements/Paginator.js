@@ -17,8 +17,7 @@ const Paginator = ({starter}) => {
     },[firstHelpers])
 
     return (
-        <div className='helper__paginator'>
-
+        <>
             <div className="helper__list">
                 {currPage.map(({name, goal, request}) => {
                     return <SingleFund name={name} goal={goal} request={request}/>
@@ -28,7 +27,7 @@ const Paginator = ({starter}) => {
             <div className="helper__nav">
                 {/*{new Array()}*/}
             </div>
-        </div>
+        </>
     );
 }
 
