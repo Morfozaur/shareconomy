@@ -1,6 +1,6 @@
 import {db} from "../../firebase";
 import { collection, getDocs, getDoc, doc } from "firebase/firestore";
-import {fetchFoundations, fetchFundraisers, fetchMotto, fetchOrganisations} from "./allFetchers";
+import {fetchFoundations, fetchFundraisers, fetchList, fetchMotto, fetchOrganisations} from "./allFetchers";
 
 
 const loadData = () => {
@@ -9,6 +9,7 @@ const loadData = () => {
             .then(res => {
                 const data = res.docs.map(post => post.data());
                 dispatch(fetchFoundations(data));
+                dispatch(fetchList(data));
             })
 
         await getDocs(collection(db, 'fundraisers'))
