@@ -1,0 +1,80 @@
+.helpers {
+  &, &__header, &__choose {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  padding: 4.375rem 0;
+  &__header {
+    gap: 1.562rem;
+    margin-bottom: 3.125rem;
+  }
+  &__title {
+    font-size: 2.375rem;
+  }
+  &__selector {
+    display: flex;
+    flex-direction: row;
+    gap: 3.75rem;
+    margin-bottom: 4.375rem;
+  }
+  &__choose {
+    background: white;
+    border: none;
+    width: 210px;
+    height: 80px;
+    font-size: 1.5rem;
+    text-align: center;
+    &--active {
+      border: 1px solid $base-color;
+    }
+  }
+  &__motto {
+    font-size: 1.375rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__list {
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__single {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.875rem;
+    margin-top: 1.625rem;
+    border-bottom: 2px solid $shade-color;
+    &:last-of-type {
+      border-bottom: none
+    }
+  }
+  &__title {
+    font-size: 1.625rem;
+    line-height: 2.187rem;
+    font-weight: 400;
+    font-family: $font-alt;
+  }
+  &__goal {
+    font-family: $font-alt;
+    font-weight: 300;
+    margin-right: 2.375rem;
+  }
+  &__request {
+    font-size: 1.125rem;
+    font-family: $font-alt;
+    font-weight: 400;
+    margin-right: 2.375rem;
+  }
+  &__nav {
+    display: flex;
+    gap: 1.375rem;
+    margin-bottom: 5rem;
+  }
+  &__page {
+    width: 40px;
+    height: 50px;
+    border: 1px solid $base-color;
+  }
+}

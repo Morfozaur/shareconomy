@@ -14,7 +14,7 @@ const paginateMe = (currList, setCurrPage) => {
         newList.push(pageList)
     }
     if (newList.length > 0){
-        console.log(newList.length, 'penis')
+        console.log(newList.length, 'test')
         console.log('tak')
         setCurrPage(newList[0])
     }
