@@ -17,15 +17,15 @@ const Paginator = ({starter}) => {
 
     return (
         <>
-            <div className="helper__list">
+            <div className="helpers__list">
                 {currPage.map(({name, goal, request}) => {
                     return <SingleFund name={name} goal={goal} request={request}/>
                 })}
             </div>
 
-            <div className="helper__nav">
+            <div className="helpers__nav">
                 {btns.map(el =>{
-                    return <p>penis</p>
+                    return <div className='helpers__page'>{el}</div>
                 })}
             </div>
         </>
