@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import HomeHeader from "./home/HomeHeader";
 import HomeInfo from "./home/HomeInfo";
 import HomeSteps from "./home/HomeSteps";

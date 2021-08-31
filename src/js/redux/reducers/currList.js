@@ -1,4 +1,4 @@
-const currList = (state = false, action) => {
+const currList = (state = [], action) => {
     switch (action.type) {
         case 'LIST':
             return action.payload

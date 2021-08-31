@@ -1,5 +1,4 @@
 import React from 'react';
-import
 import Decoration from "../elements/Decoration";
 
 const HomeContact = () => {
