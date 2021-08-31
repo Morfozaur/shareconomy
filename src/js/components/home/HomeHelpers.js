@@ -1,11 +1,9 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {loadData} from "../../redux/actions/loadData";
 import Decoration from "../elements/Decoration";
 import HelperMotto from "./elements/HelperMotto";
 import Paginator from "./elements/Paginator";
 import classNames from "classnames";
-import {fetchList} from "../../redux/actions/allFetchers";
 import {dumbData} from "../../dumbData";
 
 
