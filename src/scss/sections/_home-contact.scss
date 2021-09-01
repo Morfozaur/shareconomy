@@ -28,7 +28,9 @@
     margin:12.5rem 0 16.875rem;
     align-self: center;
   }
-
+  &__header {
+    margin-bottom: 1rem;
+  }
   &__title {
     align-items: center;
     font-size: 2.375rem;
@@ -36,7 +38,7 @@
     margin-bottom: 1.625rem;
   }
   &__form {
-    margin-top: 4.375rem;
+    margin-top: 1rem;
   }
   &__data {
     display: flex;
@@ -86,6 +88,12 @@
     font-size: 0.75rem;
     color: red;
     margin-top: .5em;
+  }
+  &__success {
+    min-height: 38px;
+    font-weight: 600;
+    line-height: 1.2rem;
+    color:green;
   }
   &__button {
     align-self: flex-end;
