@@ -8,15 +8,13 @@ const HomeContact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [conf, setConf] = useState(false);
+    const [success, setSuccess] = useState(false);
     const [wrongName, setWrongName] = useState(false);
     const [wrongMail, setWrongMail] = useState(false);
     const [wrongMessage, setWrongMessage] = useState(false);
 
-    const space = (str) =>(/\s/).test(str);
-
     const validate = (mail) => {
-        const reg = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+        const reg = /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
         return reg.test(mail);
     }
 
@@ -34,48 +32,52 @@ const HomeContact = () => {
 
     const send = (e) => {
         e.preventDefault();
-        let errChck = false;
 
+        const space = (str) =>(/\s/).test(str);
         const newName = name.trim();
         setName(newName);
 
-        if (space(newName)) {
-            setWrongName(true);
-            errChck = true;
-        } else {setWrongName(false)}
+        if (space(name) || (!name.length)) {setWrongName(true)}
+        else {setWrongName(false)}
 
-        if (!validate(email)) {
-            setWrongMail(true)
-            errChck = true;
-        } else {setWrongMail(false)}
+        if (!validate(email)) {setWrongMail(true)}
+        else {setWrongMail(false)}
 
-        if (message.length < 120 ) {
-            setWrongMessage(true)
-            errChck = true;
-        } else {setWrongMessage(false)}
+        if (message.length < 120 ) {setWrongMessage(true)}
+        else {setWrongMessage(false)}
+
         fetcher(name, email, message)
             .then(res => {
-                console.log(res, res.status)
+                console.log(res);
+                if (!res.errors) {
+                    setSuccess(true);
+                    setName('');
+                    setEmail('');
+                    setMessage('');
+                }
+
             })
             .catch(res => {
-                console.log(res, res.status)
+                console.log(res);
             })
-
     };
 
     const changeName = (e) => {
-        setName(e.target.value)
-        setWrongName(false)
+        setName(e.target.value);
+        setWrongName(false);
+        setSuccess(false);
     };
 
     const changeMail = (e) => {
-        setEmail(e.target.value)
-        setWrongMail(false)
+        setEmail(e.target.value);
+        setWrongMail(false);
+        setSuccess(false);
     };
 
     const changeMessage = (e) => {
-        setMessage(e.target.value)
-        setWrongMessage(false)
+        setMessage(e.target.value);
+        setWrongMessage(false);
+        setSuccess(false);
     };
 
     return (
@@ -84,6 +86,13 @@ const HomeContact = () => {
                 <div className="contact__header">
                     <div className="contact__title">Skontaktuj się z nami</div>
                     <Decoration/>
+                </div>
+                <div className='contact__success'>
+                    {success &&
+                    <>
+                        <p>Wiadomość została wysłana!</p>
+                        <p>Wkrótce się skontaktujemy</p>
+                    </>}
                 </div>
                 <form  className="contact__form" onSubmit={e=>send(e)}>
                     <div className={classNames("contact__data", {'contact__data--error' : wrongName || wrongMail})}>
