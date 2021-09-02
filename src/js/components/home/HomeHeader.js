@@ -8,15 +8,15 @@ const HomeHeader = ({toLogin}) => {
 
     return (
         <section className='header'>
-            <div className="cover">
-                <img className='cover__img' src={cover} alt="cover"/>
+            <div className="header__cover">
+                <img className='header__img' src={cover} alt="cover"/>
             </div>
             <div className="toform">
                 <div className="toform__group">
-                    <div className="toform__title">
+                    <h2 className="toform__title font__header">
                         <span>Zacznij pomagać!</span>
                         <span>Oddaj niechciane rzeczy w zaufane ręce</span>
-                    </div>
+                    </h2>
                     <Decoration/>
                     <div className="toform__buttons">
                         <div className="btn btn--big" onClick={toLogin}><span>Oddaj</span><span>Rzeczy</span></div>

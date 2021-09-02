@@ -8,7 +8,7 @@ const HomeAbout = () => {
         <section className='about'>
             <div className="about__frame">
                 <div className="about__content">
-                    <div className="about__title">O nas</div>
+                    <h2 className="about__title font__header">O nas</h2>
                     <Decoration/>
                     <p className="about__text">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
                     <img src={signature} alt="signature" className="about__signature"/>
