@@ -40,7 +40,7 @@ const Paginator = ({active}) => {
                     const changePage = () => {
                         setPageNumber(idx)
                     };
-                    return <div key={el+idx} className={classNames('helpers__page', {'helpers__choose--active': pageNumber === idx})}
+                    return <div key={el+idx} className={classNames('helpers__page', {'btn--frame': pageNumber === idx})}
                                 onClick={()=>changePage()}>{el}</div>
                 })}
                     </>
