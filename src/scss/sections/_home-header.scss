@@ -3,19 +3,18 @@
   height: 840px;
   padding: 0 8.875rem;
   justify-content: center;
+  &__cover {
+    position: relative;
+    width: 50%;
+  }
+  &__img {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      right: 0
+  }
 }
 
-.cover {
-  position: relative;
-  width: 50%;
-}
-
-.cover__img {
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  right: 0
-}
 
 .toform {
   &__group {
@@ -30,8 +29,6 @@
     align-items: center;
   }
   &__title {
-    font-size: 2.375rem;
-    line-height: 3.437rem;
     letter-spacing: -1px;
     margin-bottom: 1.625rem;
     align-items: center;

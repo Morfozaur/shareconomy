@@ -6,6 +6,7 @@
   align-items: center;
   text-align: center;
   font-weight: 300;
+  font-family: $font-base;
   border: 1px solid $base-color;
   &:active {
     transform: scale(.96);

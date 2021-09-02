@@ -19,7 +19,7 @@ const HomeHelpers = () => {
     return (
         <section className='helpers'>
             <div className="helpers__header">
-                <div className="helpers__title">Komu pomagamy?</div>
+                <h2 className="font__header">Komu pomagamy?</h2>
                 <Decoration/>
             </div>
             <div className="helpers__selector">
