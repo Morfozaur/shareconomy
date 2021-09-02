@@ -59,27 +59,14 @@
     font-weight: 600;
     margin-bottom: 0.75rem;
   }
-  &__input {
-    border: none;
-    border-bottom: 1px solid $base-color;
-    width: 100%;
-    &--error {
-      border-color: red;
-    }
-  }
   &__textarea {
     height: 102px;
   }
   &__input, &__textarea {
-    background: none;
     &, &::placeholder {
       font-family: $font-base;
       font-size: 1.125rem;
       line-height: 1.5rem;
-      color: $light-color;
-    }
-    &, &:focus {
-      color: $base-color;
     }
   }
   &__error {

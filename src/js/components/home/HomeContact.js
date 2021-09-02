@@ -98,7 +98,7 @@ const HomeContact = () => {
                     <div className={classNames("contact__data", {'contact__data--error' : wrongName || wrongMail})}>
                         <div className="contact__group contact__group--data">
                             <label className='contact__label contact__label--data' htmlFor="yourName">Wpisz swoje imię</label>
-                            <input className={classNames('contact__input', {'contact__input--error' : (wrongName)})}
+                            <input className={classNames('input', {'contact__input--error' : (wrongName)})}
                                    type="text"
                                    id='yourName'
                                    autoComplete='none'
@@ -111,7 +111,7 @@ const HomeContact = () => {
                         </div>
                         <div className="contact__group contact__group--data">
                             <label className='contact__label contact__label--data' htmlFor="yourMail">Wpisz swój email</label>
-                            <input className={classNames('contact__input', {'contact__input--error' : (wrongMail)})}
+                            <input className={classNames('input', {'input--error' : (wrongMail)})}
                                    type="email"
                                    id='yourMail'
                                    autoComplete='none'
@@ -125,7 +125,7 @@ const HomeContact = () => {
                     </div>
                     <div className="contact__group">
                         <label className='contact__label' htmlFor="text">Wpisz swoją wiadomość</label>
-                        <textarea className={classNames('contact__input contact__textarea', {'contact__input--error' : (wrongMessage)})}
+                        <textarea className={classNames('textarea contact__textarea', {'input--error' : (wrongMessage)})}
                                   id='text'
                                   rows={4}
                                   value={message}
