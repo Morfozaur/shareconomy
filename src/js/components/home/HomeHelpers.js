@@ -23,11 +23,11 @@ const HomeHelpers = () => {
                 <Decoration/>
             </div>
             <div className="helpers__selector">
-                <button className={classNames("helpers__choose", {'helpers__choose--active': active==='foundations'})}
+                <button className={classNames("helpers__choose", {'btn--frame': active==='foundations'})}
                         onClick={e=>setActivator(e,'foundations')}>Fundacjom</button>
-                <button className={classNames("helpers__choose", {'helpers__choose--active': active==='organisations'})}
+                <button className={classNames("helpers__choose", {'btn--frame': active==='organisations'})}
                         onClick={e=>setActivator(e,'organisations')}>Organizacjom pozarządowym</button>
-                <button className={classNames("helpers__choose", {'helpers__choose--active': active==='fundraisers'})}
+                <button className={classNames("helpers__choose", {'btn--frame': active==='fundraisers'})}
                             onClick={e=>setActivator(e,'fundraisers')}>Lokalnym zbiórkom</button>
             </div>
             <HelperMotto active={active}/>

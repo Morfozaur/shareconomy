@@ -23,9 +23,6 @@
     height: 80px;
     font-size: 1.5rem;
     text-align: center;
-    &--active {
-      border: 1px solid $base-color;
-    }
   }
   &__motto {;
     max-width: 640px;
@@ -86,9 +83,6 @@
     width: 40px;
     height: 50px;
     font-size: 1.125rem;
-    &--active {
-      border: 1px solid $base-color;
-    }
   }
   @include tablet {
     &__selector {

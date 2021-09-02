@@ -39,7 +39,7 @@ const HomeSteps = ({toLogin}) => {
                 </div>
             </div>
             <div className="steps__btn" >
-                <div className="btn btn--big" onClick={toLogin}>
+                <div className="btn btn--big btn--frame" onClick={toLogin}>
                     <span>Oddaj</span>
                     <span>Rzeczy</span>
                 </div>

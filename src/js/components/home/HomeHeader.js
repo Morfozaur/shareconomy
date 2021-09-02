@@ -19,8 +19,8 @@ const HomeHeader = ({toLogin}) => {
                     </h2>
                     <Decoration/>
                     <div className="toform__buttons">
-                        <div className="btn btn--big" onClick={toLogin}><span>Oddaj</span><span>Rzeczy</span></div>
-                        <div className="btn btn--big" onClick={toLogin}><span>Zorganizuj</span><span>Zbiórkę</span></div>
+                        <div className="btn btn--big btn--frame" onClick={toLogin}><span>Oddaj</span><span>Rzeczy</span></div>
+                        <div className="btn btn--big btn--frame" onClick={toLogin}><span>Zorganizuj</span><span>Zbiórkę</span></div>
                     </div>
                 </div>
             </div>

@@ -7,9 +7,11 @@
   text-align: center;
   font-weight: 300;
   font-family: $font-base;
-  border: 1px solid $base-color;
   &:active {
     transform: scale(.96);
+  }
+  &--frame {
+    border: 1px solid $base-color;
   }
   &--big {
     max-width: 19.375rem;

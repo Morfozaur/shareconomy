@@ -4,8 +4,7 @@
 @import "settings/base";
 @import 'settings/mixins';
 
-@import "elements/buttons";
-@import "elements/decoration";
+
 
 @import "sections/menu";
 @import "sections/home-header";
@@ -15,3 +14,5 @@
 @import "sections/home-helpers";
 @import "sections/home-contact";
 
+@import "elements/buttons";
+@import "elements/decoration";
