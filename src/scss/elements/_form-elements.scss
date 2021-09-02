@@ -1,0 +1,65 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 300;
+  font-family: $font-base;
+  background: white;
+  border: none;
+  &:active {
+    transform: scale(.96);
+  }
+  &--frame {
+    border: 1px solid $base-color;
+  }
+  &--big {
+    max-width: 19.375rem;
+    width: 100%;
+    height: 7.5rem;
+    font-size: 2.25rem;
+    line-height: 2.812rem;
+    text-transform: uppercase;
+  }
+}
+.input {
+  height: 2.5rem;
+}
+.textarea {
+  resize: none;
+}
+.input, .textarea {
+  width: 100%;
+  padding: 2px;
+  font-family: $font-base;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: $shade-color;
+  background: none;
+  border: none;
+  border-bottom: 1px solid $shade-color;
+  &:focus {
+    background: none;
+    outline: none;
+    border-bottom: 3px solid $shade-color;
+  }
+  &--error {
+    &, &:focus{
+      border-color: red;
+    }
+  }
+}
