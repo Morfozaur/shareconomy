@@ -3,12 +3,14 @@ import {isLogged} from "./isLogged";
 import {motto} from "./motto";
 import {helpers} from "./helpers";
 import {currList} from "./currList";
+import {loginData} from "./loginData";
 
 const allReducers = combineReducers( {
     isLogged,
     helpers,
     motto,
-    currList
+    currList,
+    loginData
 });
 
 export {allReducers}

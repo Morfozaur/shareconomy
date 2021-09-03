@@ -6,15 +6,15 @@ import classNames from "classnames";
 
 const NavBar = ({mobile, open}) => {
 
-    const history = useHistory()
+    const history = useHistory();
 
     const scrollTarget = (target) => scroller.scrollTo(target, {smooth: true, duration: 700})
 
     const scrollToPage = async (target) => {
         if (history.location.pathname !=='/') {
-            await history.push('/')
+            await history.push('/');
         }
-        scrollTarget(target)
+        scrollTarget(target);
     };
 
     return (

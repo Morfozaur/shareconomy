@@ -3,6 +3,7 @@ import Decoration from "../elements/Decoration";
 import face from "../../../assets/face.svg"
 import insta from "../../../assets/insta.svg"
 import classNames from "classnames";
+import {validateMail} from "../../validateMail";
 
 const HomeContact = () => {
     const [name, setName] = useState('');
@@ -13,10 +14,6 @@ const HomeContact = () => {
     const [wrongMail, setWrongMail] = useState(false);
     const [wrongMessage, setWrongMessage] = useState(false);
 
-    const validate = (mail) => {
-        const reg = /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-        return reg.test(mail);
-    }
 
     const fetchMail = `https://fer-api.coderslab.pl/v1/portfolio/contact`;
     const fetcher = async (name, email, message) => {
@@ -40,7 +37,7 @@ const HomeContact = () => {
         if (space(name) || (!name.length)) {setWrongName(true)}
         else {setWrongName(false)}
 
-        if (!validate(email)) {setWrongMail(true)}
+        if (!validateMail(email)) {setWrongMail(true)}
         else {setWrongMail(false)}
 
         if (message.length < 120 ) {setWrongMessage(true)}
@@ -48,7 +45,6 @@ const HomeContact = () => {
 
         fetcher(name, email, message)
             .then(res => {
-                console.log(res);
                 if (!res.errors) {
                     setSuccess(true);
                     setName('');
@@ -98,7 +94,7 @@ const HomeContact = () => {
                     <div className={classNames("contact__data", {'contact__data--error' : wrongName || wrongMail})}>
                         <div className="contact__group contact__group--data">
                             <label className='contact__label contact__label--data' htmlFor="yourName">Wpisz swoje imię</label>
-                            <input className={classNames('input', {'contact__input--error' : (wrongName)})}
+                            <input className={classNames('input', {'input--error' : (wrongName)})}
                                    type="text"
                                    id='yourName'
                                    autoComplete='none'
