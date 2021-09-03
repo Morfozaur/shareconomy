@@ -35,7 +35,7 @@ const Menu = () => {
 
 
 
-    const logOut = (page) => {
+    const logOut = () => {
         dispatch(fetchLogin(false));
         history.push(`/wylogowano`);
     };
@@ -47,7 +47,6 @@ const Menu = () => {
         } else if (mobile === false) {setMobile(true)}
     }, [windowWidth, openNav, mobile])
 
-    console.log(isLogged)
     return (
         <menu className='menu'>
             <div className="menu__login">

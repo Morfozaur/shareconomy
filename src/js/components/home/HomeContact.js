@@ -54,7 +54,7 @@ const HomeContact = () => {
 
             })
             .catch(res => {
-                console.log(res);
+                console.error(res);
             })
     };
 

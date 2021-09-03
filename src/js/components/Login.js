@@ -2,9 +2,7 @@ import React, {useState} from 'react';
 import Decoration from "./elements/Decoration";
 import {Link, useHistory} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {validateMail} from "../validateMail";
-import {fetchLogin, fetchLoginData} from "../redux/actions/allFetchers";
-import {loginData} from "../redux/reducers/loginData";
+import {fetchLogin} from "../redux/actions/allFetchers";
 import classNames from "classnames";
 
 const Login = () => {
