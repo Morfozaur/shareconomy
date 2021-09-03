@@ -1,4 +1,5 @@
 const fetchLogin = data => ({type: 'LOG-ACTION', payload: data});
+const fetchLoginData = data => ({type: 'SET-DATA', payload: data});
 
 const fetchFundraisers = data => ({type: 'FUNDRAISERS', payload: data});
 const fetchOrganisations = data => ({type: 'ORGANISATIONS', payload: data});
@@ -12,5 +13,6 @@ export {
     fetchFundraisers,
     fetchOrganisations,
     fetchMotto,
-    fetchList
+    fetchList,
+    fetchLoginData
 }

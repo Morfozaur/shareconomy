@@ -8,6 +8,11 @@
   }
   &__header {
     margin-bottom: 3.75rem;
+    &--logout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__title {
     margin-bottom: 1.5rem;
@@ -18,8 +23,8 @@
     max-width: 386px;
     margin: 0 3.75rem 2.5rem;
     background: $light-color;
-    padding: 2.5rem 0;
-    gap: 2rem;
+    padding: 2.5rem 1rem;
+    gap: 1rem;
   }
   &__group {
     align-items: flex-start;
@@ -36,5 +41,17 @@
   &__btn {
     height: 50px;
     width: 117px;
+    &--logout {
+      margin-top: 2.25rem;
+    }
+  }
+  &__error {
+    height: .75rem;
+    margin-top: 0.25rem;
+    font-size: .75rem;
+    color: red;
+  }
+  @include phone {
+    padding: 0 1.812rem;
   }
 }

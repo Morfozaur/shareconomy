@@ -9,7 +9,9 @@ import {allReducers} from "./js/redux/reducers/allReducers";
 
 
 const composeEnhancers = compose(
-    applyMiddleware(thunk)
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
 )
 
 const store = createStore(allReducers, composeEnhancers);
