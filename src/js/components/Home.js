@@ -7,14 +7,17 @@ import HomeHelpers from "./home/HomeHelpers";
 import HomeContact from "./home/HomeContact";
 import {useHistory} from "react-router-dom";
 import {loadData} from "../redux/actions/loadData";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 const Home = () => {
     const dispatch = useDispatch();
     const history = useHistory()
 
+    const isLogged = useSelector(state => state.isLogged)
+
     const toLogin = () => {
-        history.push('/logowanie')
+        if (isLogged) {history.push('/oddaj-rzeczy')}
+        else {history.push('/logowanie')}
     };
 
 
