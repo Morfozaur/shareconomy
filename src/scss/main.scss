@@ -1,8 +1,9 @@
 @import "settings/reset";
+@import 'settings/mixins';
 @import "settings/colors";
 @import "settings/fonts";
 @import "settings/base";
-@import 'settings/mixins';
+
 
 @import "elements/form-elements";
 @import "elements/decoration";
@@ -14,6 +15,7 @@
 @import "sections/home-about";
 @import "sections/home-helpers";
 @import "sections/home-contact";
+@import "sections/form-controls";
 
 @import "sections/login";
 

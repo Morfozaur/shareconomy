@@ -1,13 +1,13 @@
 import React from 'react';
-import FormHeader from "./form/FormHeader";
-import FormInfo from "./form/FormInfo";
+import FormControls from "./form/FormControls";
+import FormInfo from "./form/FormWarning";
 import FormBody from "./form/FormBody";
 import HomeContact from "./home/HomeContact";
 
 const Form = () => {
     return (
         <>
-            <FormHeader/>
+            <FormControls/>
             <FormInfo/>
             <FormBody/>
             <HomeContact/>

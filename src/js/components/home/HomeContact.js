@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 import Decoration from "../elements/Decoration";
-import face from "../../../assets/face.svg"
-import insta from "../../../assets/insta.svg"
 import classNames from "classnames";
 import {validateMail} from "../../validateMail";
+import Footer from "../elements/Footer";
 
 const HomeContact = () => {
     const [name, setName] = useState('');
@@ -134,13 +133,7 @@ const HomeContact = () => {
                     <button className=" btn contact__button font__subheader" onClick={e=>send(e)}>Wyślij</button>
                 </form>
             </div>
-            <div className="contact__footer">
-                <p className="contact__credits">Copyright by Coders Lab</p>
-                <div className="contact__media">
-                    <img src={face} className='contact__social' alt="Facebook"/>
-                    <img src={insta} className='contact__social' alt="Instagram"/>
-                </div>
-            </div>
+            <Footer/>
         </section>
     );
 }

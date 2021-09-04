@@ -55,6 +55,7 @@ select:-webkit-autofill:focus {
   &:focus {
     background: none;
     outline: none;
+    padding-bottom: 0;
     border-bottom: 3px solid $shade-color;
   }
   &--error {
