@@ -1,0 +1,147 @@
+@mixin img-style {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  &:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    height: 853px;
+    width: 100%;
+    background-image: url("../../assets/hero.jpg");
+    background-repeat: no-repeat;
+    top: -165px;
+    opacity: .2;
+  }
+  &__cover {
+    display: none;
+  }
+  &__frame {
+    width: auto;
+  }
+}
+
+
+.controls {
+  display: flex;
+  height: 692px;
+  &__cover, &__frame {
+    width: 50%;
+  }
+  &__cover {
+    position: relative;
+  }
+  &__img {
+    z-index: -1;
+    position: absolute;
+    background-size: cover;
+    max-width: 1015px;
+    height: 853px;
+    top: -165px;
+    left: 0;
+  }
+  &__frame {
+    align-items: flex-start;
+  }
+  &__header, &__select, &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 665px;
+  }
+  &__box {
+    margin-top: 6.125rem;
+  }
+  &__title {
+    max-width: 602px;
+    padding-bottom: 1.5rem;
+  }
+  &__upper {
+    text-transform: uppercase;
+  }
+  &__lead {
+    font-size: 2.5rem;
+    margin-top: 2.625rem;
+    margin-bottom: 4.25rem;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__select {
+    position: relative;
+    height: 134px;
+    width: 134px;
+    text-align: center;
+    margin: 0 .5rem;
+    &:before {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      height: 134px;
+      width: 134px;
+      border: 1px solid $base-color;
+      transform: rotate(45deg);
+    }
+  }
+  &__step {
+    font-size: 2rem;
+    margin-bottom: 0.625rem;
+    font-weight: 300;
+  }
+  &__text {
+    max-width: 101px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+  }
+  @include narrow-pc {
+    @include img-style
+  }
+  @include tablet {
+    @include img-style
+  }
+  @include phone {
+    @include img-style;
+    height: auto;
+    padding-bottom: 2.5rem;
+    &__box {
+      max-width: 690px;
+      margin-top: 4rem;
+    }
+    &__title, &__decor, &__lead {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    &__upper {
+      text-transform: none;
+    }
+    &__menu {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin:0 2rem;
+    }
+    &__select {
+      margin: .9rem 1rem;
+    }
+  }
+  @include small {
+    &__menu {
+      margin: 0 .5rem;
+      gap: .5rem
+    }
+    &__title {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__select {
+      width: 128px;
+      height: 128px;
+      border: 1px solid $base-color;
+      justify-content: center;
+      margin: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

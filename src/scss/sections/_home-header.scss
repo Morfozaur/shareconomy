@@ -13,16 +13,12 @@
       bottom: 0;
       right: 0
   }
-}
-
-
-.toform {
   &__group {
     height: 350px;
     width: 674px;
     align-self: center;
   }
-  &, &__group, &__title, &__buttons {
+  &__toform, &__group, &__title, &__buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,60 +33,48 @@
   &__buttons {
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 4rem;
   }
-}
-
-@include narrow-pc {
-  .toform {
-    width: 683px;
+  @include narrow-pc {
+    &__toform {
+      width: 683px;
+    }
   }
-}
-
-@include mobile {
-  .toform::before {
-    z-index: -1;
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    background-image: url("../../assets/cover.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
+  @include mobile {
+    &__toform::before {
+      z-index: -1;
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      background-image: url("../../assets/cover.jpg");
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: cover;
+    }
   }
-}
-
-@include tablet {
-  .header {
-    padding: 0;
+  @include tablet {
+      padding: 0;
+    &__cover {
+      display: none;
+    }
   }
-  .cover {
-    display: none;
-  }
-}
-
-@include phone {
-  .header {
+  @include phone {
     padding: 4em;
-  }
-  .cover {
-    display: none;
-  }
-  .toform {
+    &__cover {
+      display: none;
+    }
     &__group {
       width: auto;
     }
     &__buttons {
       flex-wrap: wrap;
-      gap: 3.375rem;
       justify-content: center;
     }
   }
 }
-
