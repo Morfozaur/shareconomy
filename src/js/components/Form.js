@@ -1,14 +1,18 @@
 import React from 'react';
 import FormControls from "./form/FormControls";
-import FormInfo from "./form/FormWarning";
+import FormWarning from "./form/FormWarning";
 import FormBody from "./form/FormBody";
 import HomeContact from "./home/HomeContact";
+import {useSelector} from "react-redux";
 
 const Form = () => {
+
+    const currForm = useSelector(state => state.currForm)
+
     return (
         <>
             <FormControls/>
-            <FormInfo/>
+            {currForm < 5 && <FormWarning/>}
             <FormBody/>
             <HomeContact/>
         </>
