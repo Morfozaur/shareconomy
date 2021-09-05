@@ -6,22 +6,11 @@ import Register from "./Register";
 import Menu from "./Menu";
 import Form from "./Form";
 import {HashRouter, Route, Switch} from "react-router-dom";
-// import {useDispatch} from "react-redux";
-// import {fetchLogin} from "../redux/actions/allFetchers";
-// import {app} from "../firebase";
-
+import {useSelector} from "react-redux";
 
 function App() {
 
-    // const dispatch = useDispatch()
-
-    // const auth = getAuth(app);
-    // onAuthStateChanged(auth, user => {
-    //     if (user) {dispatch(fetchLogin(true))}
-    //     else {dispatch(fetchLogin('false'))}
-    // })
-
-
+    const isLogged = useSelector(state => state.isLogged)
 
     return (
         <HashRouter>
@@ -31,7 +20,8 @@ function App() {
                 <Route path='/logowanie' component={Login}/>
                 <Route path='/rejestracja' component={Register}/>
                 <Route path='/wylogowano' component={Logout}/>
-                <Route path='/oddaj-rzeczy' component={Form}/>
+                {!isLogged && <Route path='/oddaj-rzeczy' component={Form}/>}
+                {/*{!isLogged && <Route path='/oddaj-rzeczy' component={Login}/>}*/}
             </Switch>
         </HashRouter>
   );

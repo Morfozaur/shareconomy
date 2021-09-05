@@ -5,6 +5,7 @@ import {helpers} from "./helpers";
 import {currList} from "./currList";
 import {loginData} from "./loginData";
 import {currForm} from "./currForm";
+import {formData} from "./formData";
 
 const allReducers = combineReducers( {
     isLogged,
@@ -12,7 +13,8 @@ const allReducers = combineReducers( {
     motto,
     currList,
     loginData,
-    currForm
+    currForm,
+    formData
 });
 
 export {allReducers}
