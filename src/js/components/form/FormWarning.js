@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 
-const FormInfo = () => {
+const FormWarning = () => {
 
     const warnData = [
         'Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.',
@@ -19,4 +19,4 @@ const FormInfo = () => {
     );
 }
 
-export default FormInfo;
+export default FormWarning;
