@@ -1,9 +1,12 @@
 import React from 'react';
 
 const FormBody = () => {
+    
     return (
-        <div>
-            BODY
+        <div className='form'>
+            <div className="form__data">
+
+            </div>
         </div>
     );
 }
