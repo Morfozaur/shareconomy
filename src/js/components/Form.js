@@ -6,7 +6,6 @@ import HomeContact from "./home/HomeContact";
 import {useSelector} from "react-redux";
 
 const Form = () => {
-
     const currForm = useSelector(state => state.currForm)
 
     return (

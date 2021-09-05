@@ -13,7 +13,7 @@ const FormWarning = () => {
 
     return (
         <div className='warning'>
-            <h3 className="warning__title">Ważne!</h3>
+            <h3 className="form__title">Ważne!</h3>
             {currForm< 5 && <p className="warning__info">{warnData[currForm-1]}</p>}
         </div>
     );
