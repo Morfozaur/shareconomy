@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {fetchBags} from "../../redux/actions/allFetchers";
+import {fetchBags, fetchForm} from "../../redux/actions/allFetchers";
 import iconUp from "../../../assets/icon-up.svg"
 import iconDown from "../../../assets/icon-down.svg"
 
@@ -11,12 +11,24 @@ const FormStepB = () => {
     const [unroll, setUnroll] = useState(false)
     const dispatch = useDispatch();
     const updateBags = (data) => dispatch(fetchBags(data))
+    const currForm = useSelector(state => state.currForm);
 
 
     const setBags = (num) => {
         setSelect(num);
         updateBags(num);
         setUnroll(false)
+    };
+
+
+    const prevForm = (e) => {
+        e.preventDefault();
+        dispatch(fetchForm(currForm-1))
+    };
+
+    const nextForm = (e) => {
+        e.preventDefault();
+        dispatch(fetchForm(currForm+1));
     };
 
     return (
@@ -26,11 +38,11 @@ const FormStepB = () => {
                 <div className="form__group form__group--select">
                     <div className="form__label">Liczba 60l worków:</div>
                     <div className="form__select">
-                        <p className="form__placeholder">{select === "" ? "— wybierz —" : select}</p>
+                        <p className="form__placeholder" onClick={()=>setUnroll(e=>!e)}>{select === "" ? "— wybierz —" : select}</p>
                         <img src={unroll ? iconUp : iconDown}
                              className="form_arrow"
                              alt='arrow'
-                             onClick={()=>setUnroll(e=>!e)} />
+                             onClick={()=>setUnroll(e=>!e)}/>
                         {unroll && <div className="form__list">
                             {[...Array(4)].map((el, idx) => {
                                 return <div key={idx + 1} className="form__toSelect" onClick={e=>setBags(idx + 1)}>{idx + 1}</div>
@@ -38,6 +50,10 @@ const FormStepB = () => {
                         </div>}
                     </div>
                 </div>
+            </div>
+            <div className="form__change">
+                <button className='btn btn--frame form__controls' onClick={e => prevForm(e)}>Wstecz</button>
+                <button className='btn btn--frame form__controls' disabled={bags === ""} onClick={e => nextForm(e)}>Dalej</button>
             </div>
         </div>
     );
