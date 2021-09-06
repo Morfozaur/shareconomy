@@ -1,12 +1,19 @@
 import React from 'react';
 import classNames from "classnames";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchDonation} from "../../redux/actions/allFetchers";
+import {fetchDonation, fetchForm} from "../../redux/actions/allFetchers";
 
 const FormStepA = () => {
     const dispatch = useDispatch();
     const updateDonation = (data) => dispatch(fetchDonation(data))
     const donation = useSelector(state => state.formData.donation);
+
+    const currForm = useSelector(state => state.currForm);
+
+    const nextForm = (e) => {
+        e.preventDefault();
+        dispatch(fetchForm(currForm+1));
+    };
 
     return (
         <div className="form__step">
@@ -66,6 +73,7 @@ const FormStepA = () => {
                            className="form__label">inne</label>
                 </div>
             </div>
+            <button className='btn btn--frame form__controls' disabled={donation === ""} onClick={e => nextForm(e)}>Dalej</button>
         </div>
     );
 }
