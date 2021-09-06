@@ -17,7 +17,7 @@ const formDataStarter = {
     }
 }
 
-const formData = (state = false, action) => {
+const formData = (state = formDataStarter, action) => {
     switch (action.type) {
         case 'FORM-DONATION':
             return {...state, donation: action.payload}

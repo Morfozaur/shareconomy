@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classNames from "classnames";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchDonation} from "../../redux/actions/allFetchers";
@@ -11,15 +11,16 @@ const FormStepA = () => {
     return (
         <div className="form__step">
             <p className="form__progress">Krok 1/4</p>
-            <h3 className="form__title">Zaznacz, co chcesz oddać:</h3>
+            <h3 className="form__title form__title--step">Zaznacz, co chcesz oddać:</h3>
             <div className='form__section'>
                 <div className="form__group">
-                    <div className={classNames("form__radio btn--frame", {"form__radio--checked" : donation === "clothsGood"})} onClick={()=>updateDonation("clothsGood")}/>
+                    <div className={classNames("form__radio btn--frame", {"form__radio--checked" : donation === "clothsGood"})}
+                         onClick={()=>updateDonation("clothsGood")}/>
                     <input type="radio"
                            name="clothsGood"
                            className="form__radio--del"
                            value={donation}
-                           checked={donation === "clothsGood"}/>
+                           defaultChecked={donation === "clothsGood"}/>
                     <label htmlFor="clothsGood"
                            className="form__label">ubrania, które nadają się do ponownego użycia</label>
                 </div>
@@ -29,7 +30,7 @@ const FormStepA = () => {
                            name="clothsBad"
                            className="form__radio--del"
                            value={donation}
-                           checked={donation === "clothsBad"} />
+                           defaultChecked={donation === "clothsBad"} />
                     <label htmlFor="clothsGood" className="form__label">ubrania, do wyrzucenia</label>
                 </div>
                 <div className="form__group">
@@ -38,7 +39,7 @@ const FormStepA = () => {
                            name="toys"
                            className="form__radio--del"
                            value={donation}
-                           checked={donation === "toys"} />
+                           defaultChecked={donation === "toys"} />
                     <label htmlFor="toys"
                            className="form__label">zabawki</label>
 
@@ -49,7 +50,7 @@ const FormStepA = () => {
                            name="books"
                            className="form__radio--del"
                            value={donation}
-                           checked={donation === "books"} />
+                           defaultChecked={donation === "books"} />
                     <label htmlFor="books"
                            className="form__label">książki</label>
 
@@ -60,12 +61,11 @@ const FormStepA = () => {
                            name="others"
                            className="form__radio--del"
                            value={donation}
-                           checked={donation === "others"} />
+                           defaultChecked={donation === "others"} />
                     <label htmlFor="others"
                            className="form__label">inne</label>
                 </div>
             </div>
-            <button className="btn btn--frame form__change">Dalej</button>
         </div>
     );
 }

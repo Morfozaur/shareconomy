@@ -1,5 +1,8 @@
 .form {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 883px;
   padding: 2.25rem 8.875rem 3.125rem;
   &:before {
@@ -29,7 +32,9 @@
     font-size: 2.25rem;
     line-height: 3rem;
     font-weight: 600;
-    margin-top: 4.375rem;
+    &--step {
+      margin-top: 4.375rem;
+    }
   }
   &__group {
     display: flex;
@@ -44,6 +49,7 @@
     height: 40px;
     width: 40px;
     background: white;
+    flex-shrink: 0;
     &--del {
       display: none;
     }
@@ -53,12 +59,16 @@
   }
   &__change {
     display: flex;
+    gap: 3.125rem;
     justify-self: flex-end;
     align-self: flex-start;
+    margin-top: 3.125rem;
+
+  }
+  &__controls {
     height: 80px;
     width: 180px;
     font-size: 1.5rem;
-    margin-top: 9.875rem;
   }
   @include narrow-pc {
     &:before {
@@ -71,10 +81,26 @@
     };
   }
   @include phone {
+    padding: 3.125rem;
+    &__title--step {
+      text-align: center;
+    }
     &:before {
       opacity: .3;
       background-image: url("../../assets/teddy_sm.jpg");
       background-position: center;
+    }
+  }
+  @include small {
+    &__change {
+      width: 100%;
+      justify-content: space-between;
+      gap: .5em;
+    }
+    &__controls {
+      width: 100%;
+      height: 15vw;
+      max-width: 180px;
     }
   }
 }
