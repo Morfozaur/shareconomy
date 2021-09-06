@@ -17,3 +17,12 @@ body {
 .font__subheader {
   font-size: 1.125rem;
 }
+
+.font__header--small {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 3rem 0 1.25rem;
+  @include phone {
+    text-align: center;
+  }
+}

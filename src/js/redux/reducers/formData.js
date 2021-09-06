@@ -1,8 +1,14 @@
 const formDataStarter = {
     donation: '',
-    bags: '',
-    city: '',
-    recipient: '',
+    bags: '— wybierz —',
+    city: '— wybierz —',
+    recipient: {
+        dzieci: false,
+        matki: false,
+        bezdomni: false,
+        niepełnosprawni: false,
+        starsi: false
+    },
     organisation: '',
     address: {
         street: '',

@@ -1,19 +1,12 @@
 import React from 'react';
 import classNames from "classnames";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchDonation, fetchForm} from "../../redux/actions/allFetchers";
+import {fetchDonation} from "../../redux/actions/allFetchers";
 
-const FormStepA = () => {
+const FormStepA = ({nextForm}) => {
     const dispatch = useDispatch();
     const updateDonation = (data) => dispatch(fetchDonation(data))
     const donation = useSelector(state => state.formData.donation);
-
-    const currForm = useSelector(state => state.currForm);
-
-    const nextForm = (e) => {
-        e.preventDefault();
-        dispatch(fetchForm(currForm+1));
-    };
 
     return (
         <div className="form__step">
@@ -29,7 +22,8 @@ const FormStepA = () => {
                            value={donation}
                            defaultChecked={donation === "clothsGood"}/>
                     <label htmlFor="clothsGood"
-                           className="form__label">ubrania, które nadają się do ponownego użycia</label>
+                           className="form__label"
+                           onClick={()=>updateDonation("clothsGood")}>ubrania, które nadają się do ponownego użycia</label>
                 </div>
                 <div className="form__group">
                     <div className={classNames("form__radio btn--frame", {"form__radio--checked" : donation === "clothsBad"})} onClick={()=>updateDonation("clothsBad")}/>
@@ -38,7 +32,9 @@ const FormStepA = () => {
                            className="form__radio--del"
                            value={donation}
                            defaultChecked={donation === "clothsBad"} />
-                    <label htmlFor="clothsGood" className="form__label">ubrania, do wyrzucenia</label>
+                    <label htmlFor="clothsBad"
+                           className="form__label"
+                           onClick={()=>updateDonation("clothsBad")}>ubrania, do wyrzucenia</label>
                 </div>
                 <div className="form__group">
                     <div className={classNames("form__radio btn--frame", {"form__radio--checked" : donation === "toys"})} onClick={()=>updateDonation("toys")}/>
@@ -48,7 +44,8 @@ const FormStepA = () => {
                            value={donation}
                            defaultChecked={donation === "toys"} />
                     <label htmlFor="toys"
-                           className="form__label">zabawki</label>
+                           className="form__label"
+                           onClick={()=>updateDonation("toys")}>zabawki</label>
 
                 </div>
                 <div className="form__group">
@@ -59,7 +56,8 @@ const FormStepA = () => {
                            value={donation}
                            defaultChecked={donation === "books"} />
                     <label htmlFor="books"
-                           className="form__label">książki</label>
+                           className="form__label"
+                           onClick={()=>updateDonation("books")}>książki</label>
 
                 </div>
                 <div className="form__group">
@@ -70,7 +68,8 @@ const FormStepA = () => {
                            value={donation}
                            defaultChecked={donation === "others"} />
                     <label htmlFor="others"
-                           className="form__label">inne</label>
+                           className="form__label"
+                           onClick={()=>updateDonation("others")}>inne</label>
                 </div>
             </div>
             <button className='btn btn--frame form__controls' disabled={donation === ""} onClick={e => nextForm(e)}>Dalej</button>
