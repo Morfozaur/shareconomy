@@ -11,9 +11,15 @@ const fetchDonation = data => ({type: 'FORM-DONATION', payload: data});
 const fetchBags = data => ({type: 'FORM-BAGS', payload: data});
 const fetchCity = data => ({type: 'FORM-CITY', payload: data});
 const fetchRecipient = data => ({type: 'FORM-RECIPIENT', payload: data});
-const fetchAddress = data => ({type: 'FORM-ADDRESS', payload: data});
 const fetchOrganisation = data => ({type: 'FORM-ORGANISATION', payload: data});
-const fetchTerm = data => ({type: 'FORM-TERM', payload: data});
+const fetchStreet = data => ({type: 'FORM-STREET', payload: data});
+const fetchClientCity = data => ({type: 'FORM-CLIENT-CITY', payload: data});
+const fetchPostcode = data => ({type: 'FORM-POSTCODE', payload: data});
+const fetchPhone = data => ({type: 'FORM-PHONE', payload: data});
+const fetchDate = data => ({type: 'FORM-DATE', payload: data});
+const fetchTime = data => ({type: 'FORM-TIME', payload: data});
+const fetchNotes = data => ({type: 'FORM-NOTES', payload: data});
+
 
 export {
     fetchLogin,
@@ -28,7 +34,12 @@ export {
     fetchBags,
     fetchCity,
     fetchRecipient,
-    fetchAddress,
     fetchOrganisation,
-    fetchTerm
+    fetchStreet,
+    fetchClientCity,
+    fetchDate,
+    fetchNotes,
+    fetchPhone,
+    fetchPostcode,
+    fetchTime
 }

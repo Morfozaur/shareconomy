@@ -10,17 +10,13 @@ const formDataStarter = {
         starsi: false
     },
     organisation: '',
-    address: {
-        street: '',
-        city: '',
-        postcode: '',
-        phone: ''
-    },
-    term: {
-        date: '',
-        time: '',
-        notes: ''
-    }
+    street: '',
+    clientCity: '',
+    postcode: '',
+    phone: '',
+    date: '',
+    time: '',
+    notes: ''
 }
 
 const formData = (state = formDataStarter, action) => {
@@ -33,12 +29,22 @@ const formData = (state = formDataStarter, action) => {
             return {...state, city: action.payload}
         case 'FORM-RECIPIENT':
             return {...state, recipient: action.payload}
-        case 'FORM-ADDRESS':
-            return {...state, address: action.payload}
         case 'FORM-ORGANISATION':
             return {...state, organisation: action.payload}
-        case 'FORM-TERM':
-            return {...state, term: action.payload}
+        case 'FORM-STREET':
+            return {...state, street: action.payload}
+        case 'FORM-CLIENT-CITY':
+            return {...state, clientCity: action.payload}
+        case 'FORM-POSTCODE':
+            return {...state, postcode: action.payload}
+        case 'FORM-PHONE':
+            return {...state, phone: action.payload}
+        case 'FORM-DATE':
+            return {...state, date: action.payload}
+        case 'FORM-TIME':
+            return {...state, time: action.payload}
+        case 'FORM-NOTES':
+            return {...state, notes: action.payload}
         default:
             return state
     }
