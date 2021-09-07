@@ -15,7 +15,7 @@ const formDataStarter = {
     postcode: '',
     phone: '',
     date: '',
-    time: '',
+    time: '— wybierz —',
     notes: ''
 }
 
