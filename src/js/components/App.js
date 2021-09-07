@@ -20,8 +20,8 @@ function App() {
                 <Route path='/logowanie' component={Login}/>
                 <Route path='/rejestracja' component={Register}/>
                 <Route path='/wylogowano' component={Logout}/>
-                {!isLogged && <Route path='/oddaj-rzeczy' component={Form}/>}
-                {/*{!isLogged && <Route path='/oddaj-rzeczy' component={Login}/>}*/}
+                {isLogged && <Route path='/oddaj-rzeczy' component={Form}/>}
+                {!isLogged && <Route path='/oddaj-rzeczy' component={Login}/>}
             </Switch>
         </HashRouter>
   );

@@ -32,10 +32,6 @@ const FormBody = () => {
                 {currForm === 5 && <FormSummary prevForm={prevForm} nextForm={nextForm}/>}
                 {currForm === 6 && <FormFinish/>}
 
-            {/*<div className="form__change">*/}
-            {/*    <button className='btn btn--frame form__controls' onClick={e => prevForm(e)}>Wstecz</button>*/}
-            {/*    <button className='btn btn--frame form__controls' onClick={e => nextForm(e)}>Dalej</button>*/}
-            {/*</div>*/}
         </div>
     );
 }

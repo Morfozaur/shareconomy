@@ -160,18 +160,24 @@
     width: 50px;
     height: 50px;
   }
+  &__subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1.25rem;
+  }
   &__summary {
     display: flex;
     gap: 1.25rem;
     align-items: center;
     margin: .875rem 0;
     &--double {
-      gap:17rem;
+      margin-top: 3rem;
       align-items: flex-start;
     }
   }
   &__column {
-    width: 273px;
+    width: 300px;
+    margin-right: 8rem;
   }
   &__row, &__register {
     font-size: 1.5rem;
@@ -235,8 +241,6 @@
     }
     &__summary--double {
       flex-wrap: wrap;
-      gap:3rem;
-      justify-content: space-between;
     }
     &__step--finish {
       width: 100%;
@@ -273,10 +277,18 @@
         }
     &__summary--double {
       flex-direction: column;
+      align-items: center;
       gap: 0;
+    }
+    &__column {
+      margin: 0
     }
     &__step--finish {
       width: 100%;
+    }
+    &__change {
+      width: 100%;
+      justify-content: center;
     }
   }
   @include small {
@@ -289,22 +301,57 @@
       width: 100%;
       height: 15vw;
       max-width: 180px;
+      align-self: center;
     }
     &__placeholder {
       font-size: 1rem;
     }
-    &__group--address {
-      flex-direction: column;
-      gap:.5rem;
-      align-items: center;
-      margin: 1.2rem 0;
+    &__group {
+      &--address {
+        flex-direction: column;
+        gap:.5rem;
+        align-items: center;
+        margin: 1.2rem 0;
+      }
+      &--row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+      }
+    }
+    &__row {
+      width:100%;
+      &--data {
+        text-align: left;
+        margin: 0 0 .2rem;
+      }
+    }
+    &__column {
+      max-width: 300px;
+      margin-bottom: .5rem;
     }
     &__textarea {
       max-width: 100%;
     }
     &__change--center {
       width: 100%;
-      justify-content: center;
+      align-items: center;
+    }
+    &__title--finish {
+      font-size: 1.8rem;
+    }
+    &__donation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__summary{
+      width: 100%;
+      &--double {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+      }
     }
   }
 }
