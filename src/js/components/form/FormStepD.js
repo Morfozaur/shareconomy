@@ -10,7 +10,6 @@ import {
 } from "../../redux/actions/allFetchers";
 import iconUp from "../../../assets/icon-up.svg";
 import iconDown from "../../../assets/icon-down.svg";
-import BagsSelector from "./elements/BagsSelector";
 import TimeSelector from "./elements/TimeSelector";
 import classNames from "classnames";
 
@@ -81,10 +80,6 @@ const FormStepD = ({prevForm, nextForm}) => {
         const userMonth = date.substr(5,2);
         const userDay = date.substr(8,2);
 
-        const test = userDay > day
-
-        console.log(test);
-
         if (userYear == year) {
             if (userMonth == month) {
                 if (userDay < day) {
@@ -99,10 +94,6 @@ const FormStepD = ({prevForm, nextForm}) => {
             check = false;
             setDateCheck(false);
         }
-
-        console.log(userDay, userMonth, userYear)
-        console.log(day, month, year )
-        // if (year)
 
         if (check) {
             nextForm(e);
