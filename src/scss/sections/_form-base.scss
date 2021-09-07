@@ -135,6 +135,9 @@
     &--address {
       max-width: 256px;
     }
+    &--error {
+      border-color: red;
+    }
   }
   &__delivery {
     max-width: 395px;
