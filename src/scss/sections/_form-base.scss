@@ -23,6 +23,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    &--finish {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 50%;
+    }
   }
   .progress {
     font-size: 1.5rem;
@@ -51,6 +57,10 @@
     gap: 1.875rem;
     &--address {
       justify-content: space-between;
+    }
+    &--row {
+      justify-content: space-between;
+      margin: 1.25rem 0;
     }
   }
   &__label {
@@ -146,6 +156,42 @@
   &__textarea {
     height: 120px
   }
+  &__icon {
+    width: 50px;
+    height: 50px;
+  }
+  &__summary {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    margin: .875rem 0;
+    &--double {
+      gap:17rem;
+      align-items: flex-start;
+    }
+  }
+  &__column {
+    width: 273px;
+  }
+  &__row, &__register {
+    font-size: 1.5rem;
+  }
+  &__row {
+    width: 115px;
+    &--data {
+      text-align: right;
+      width:100%;
+      margin-left: .5rem;
+    }
+  }
+  &__register {
+    font-weight: 300;
+  }
+  &__quote {
+    font-size: 2.5rem;
+    max-width: 628px;
+    margin-bottom: 1.5rem
+  }
   //Next-prev
   &__change {
     display: flex;
@@ -187,6 +233,14 @@
       width: 100%;
       justify-content: center;
     }
+    &__summary--double {
+      flex-wrap: wrap;
+      gap:3rem;
+      justify-content: space-between;
+    }
+    &__step--finish {
+      width: 100%;
+    }
   }
   @include phone {
     padding: 3.125rem;
@@ -217,6 +271,13 @@
           align-items: center;
           gap: 0;
         }
+    &__summary--double {
+      flex-direction: column;
+      gap: 0;
+    }
+    &__step--finish {
+      width: 100%;
+    }
   }
   @include small {
     &__change {

@@ -34,7 +34,7 @@ const FormStepA = ({nextForm}) => {
                            defaultChecked={donation === "clothsBad"} />
                     <label htmlFor="clothsBad"
                            className="form__label"
-                           onClick={()=>updateDonation("clothsBad")}>ubrania, do wyrzucenia</label>
+                           onClick={()=>updateDonation("clothsBad")}>ubrania do wyrzucenia</label>
                 </div>
                 <div className="form__group">
                     <div className={classNames("form__radio btn--frame", {"form__radio--checked" : donation === "toys"})} onClick={()=>updateDonation("toys")}/>
