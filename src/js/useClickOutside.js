@@ -9,6 +9,6 @@ function useClickOutside(ref, setUnroll) {
             }
         }
         document.addEventListener("click", handleOutsideClick);
-    }, [ref]);
+    }, [ref, setUnroll]);
 }
 export {useClickOutside}

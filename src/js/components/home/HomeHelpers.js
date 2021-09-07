@@ -3,13 +3,10 @@ import Decoration from "../elements/Decoration";
 import HelperMotto from "./elements/HelperMotto";
 import Paginator from "./elements/Paginator";
 import classNames from "classnames";
-// import {dumbData} from "../../dumbData";
 
 
 const HomeHelpers = () => {
     const [active, setActive] = useState('foundations');
-
-    // const starter = dumbData
 
     const setActivator = (e, type) => {
         e.preventDefault();

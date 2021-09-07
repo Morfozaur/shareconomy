@@ -17,51 +17,21 @@ const FormSummary = ({prevForm, nextForm}) => {
         others:'inne',
     }
 
-    const addComma = (data) => {
-        if (data.length >0) {return ', '}
-        return ''
-    };
-
     const recList = () => {
-        let arr = '';
-        let add = false
-        if (dzieci) {
-            arr += "dzieciom"
-            add = true;
-        }
-        if (matki) {
-            if (add) {arr += addComma(arr);}
-            add = false;
-            arr += "samotnym matkom"
-            add = true;
-        }
-        if (bezdomni) {
-            if (add) {arr += addComma(arr);}
-            add = false;
-            arr += "bezdomnym"
-            add = true;
-        }
-        if (niepełnosprawni) {
-            if (add) {arr += addComma(arr);}
-            add = false;
-            arr += "niepełnosprawnym"
-            add = true;
-        }
-
-        if (starsi) {
-            if (add) {arr += addComma(arr);}
-            add = false;
-            arr += "osobom starszym"
-            add = true;
-        }
-        return arr
+        let arr = [];
+        if (dzieci) {arr.push("dzieciom")}
+        if (matki) {arr.push("samotnym matkom")}
+        if (bezdomni) {arr.push("bezdomnym")}
+        if (niepełnosprawni) {arr.push("niepełnosprawnym")}
+        if (starsi) {arr.push("osobom starszym")}
+        return arr.join(', ')
     }
 
     return (
         <div className="form__step">
-            <h3 className="form__title form__title--step">Podsumowanie Twojej darowizny</h3>
+            <h3 className="form__title form__title--step form__title--finish">Podsumowanie Twojej darowizny</h3>
             <div className="form__section">
-                <div>
+                <div className="form__donation">
                     <h4 className='font__header--small'>Oddajesz:</h4>
                     <div className="form__summary">
                         <img src={icon1} alt="shirt" className="form__icon"/>
@@ -74,7 +44,7 @@ const FormSummary = ({prevForm, nextForm}) => {
                 </div>
                 <div className="form__summary form__summary--double">
                     <div className="form__column">
-                        <h4 className='font__header--small'>Adres odbioru:</h4>
+                        <h4 className='form__subtitle'>Adres odbioru:</h4>
                         <div className="form__group form__group--row">
                             <div className="form__row">Ulica</div>
                             <div className="form__row form__row--data">{street}</div>
@@ -93,7 +63,7 @@ const FormSummary = ({prevForm, nextForm}) => {
                         </div>
                     </div>
                     <div className="form__column">
-                        <h4 className='font__header--small'>Termin odbioru:</h4>
+                        <h4 className='form__subtitle'>Termin odbioru:</h4>
                         <div className="form__group form__group--row">
                             <div className="form__row">Data</div>
                             <div className="form__row form__row--data">{date}</div>
