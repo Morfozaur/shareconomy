@@ -80,7 +80,9 @@ const FormStepD = ({prevForm, nextForm}) => {
         const userMonth = date.substr(5,2);
         const userDay = date.substr(8,2);
 
+        // eslint-disable-next-line
         if (userYear == year) {
+            // eslint-disable-next-line
             if (userMonth == month) {
                 if (userDay < day) {
                     check = false;
