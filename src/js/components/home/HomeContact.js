@@ -130,7 +130,7 @@ const HomeContact = () => {
                             {wrongMessage && <>Wiadomość musi mieć co najmniej 120 znaków!</>}
                         </p>
                     </div>
-                    <button className=" btn contact__button font__subheader" onClick={e=>send(e)}>Wyślij</button>
+                    <button className="btn--frame btn contact__button font__subheader" onClick={e=>send(e)}>Wyślij</button>
                 </form>
             </div>
             <Footer/>
